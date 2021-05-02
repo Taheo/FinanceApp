@@ -10,7 +10,7 @@ namespace FinanceApp.Services
     {
         public IEnumerable<Expense> GetAllExpenses()
         {
-            Expense[] data = { new Expense { Category="Household", InsertDate=DateTime.Now.Date, Total=20.22M } };
+            Expense[] data = { new Expense { Category="Household", InsertDate=DateTime.UtcNow, Total=20.22M } };
 
             return data;
         }
