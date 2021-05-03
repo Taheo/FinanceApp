@@ -7,7 +7,7 @@ namespace FinanceApp.Models
 {
     public class Expense
     {
-        public string Category { get; set; }
+        public ExpenseCategory Category { get; set; }
         public DateTime InsertDate { get; set; }
         public decimal Total { get; set; }
     }

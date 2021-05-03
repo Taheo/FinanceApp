@@ -18,7 +18,6 @@ namespace FinanceApp.Controllers
         }
 
         [HttpGet]
-        [Route("getAllExpenses")]
         public IActionResult GetAllExpenses()
         {
             var result = _expensesService.GetAllExpenses();

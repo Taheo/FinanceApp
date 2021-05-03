@@ -1,4 +1,5 @@
 ﻿using FinanceApp.Models;
+using FinanceApp.Repos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +9,11 @@ namespace FinanceApp.Services
 {
     public class ExpensesService
     {
-        public IEnumerable<Expense> GetAllExpenses()
+        private readonly ExpensesRepo _expensesRepo;
+        public ExpensesService(ExpensesRepo expensesRepo)
         {
-            Expense[] data = { new Expense { Category="Household", InsertDate=DateTime.UtcNow, Total=20.22M } };
-
-            return data;
+            _expensesRepo = expensesRepo;
         }
+        public IEnumerable<Expense> GetAllExpenses() => _expensesRepo.GetAllExpenses();
     }
 }
